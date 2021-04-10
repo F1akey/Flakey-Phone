@@ -2,7 +2,7 @@
 
 # Flakey Phone
 
-> Custom Phone made for FiveM.
+> Custom Phone made for NXT RP.
 
 ## Requirements
 
