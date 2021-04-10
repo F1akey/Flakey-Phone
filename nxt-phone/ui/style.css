@@ -1,0 +1,554 @@
+
+body {
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.shell {
+    width: 30vh;
+    height: 60vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: -70vh;
+    right: 1vh;
+}
+
+.shell-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.shell-background {
+    width: 98%;
+    height: 98%;
+    margin: auto;
+    border-radius: 5vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 35vh;
+}
+
+.phone-header {
+    width: 100%;
+    height: 4vh;
+    border-top-left-radius: 5vh;
+    border-top-right-radius: 5vh;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 1vh;
+    color: white;
+}
+
+.phone-time {
+    margin: auto;
+    margin-top: 0.5vh;
+    margin-left: 3.7vh;
+    margin-right: 0vh;
+    font-size: 1.2vh;
+    font-weight: 600;
+    z-index: 999;
+}
+
+.phone-wifi {
+    margin: auto;
+    margin-top: 0.8vh;
+    margin-right: 0.7vh;
+    font-size: 1vh;
+    z-index: 999;
+    font-weight: bold;
+}
+
+.phone-battery {
+    margin: auto;
+    margin-top: 0.8vh;
+    margin-left: 0vh;
+    margin-right: 3.55vh;
+    font-size: 1vh;
+    z-index: 999;
+    font-weight: bold;
+}
+
+.bottom-container {
+    width: 95%;
+    height: 10vh;
+    display: flex;
+    z-index: 999;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottom-home-btn {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 0.8vh;
+    width: 18vh;
+    margin: auto;
+    border-radius: 1vh;
+    z-index: 999;
+    display: none;
+}
+
+.bottom-home-btn:hover {
+    background-color: white;
+}
+
+.home-btn {
+    margin: auto;
+    margin-bottom: 2.5vh;
+    padding: 1.5vh;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 5vh 5vh 5vh 5vh;
+    column-gap: 1.3vh;
+    row-gap: 1.3vh;
+    margin: auto;
+    margin-top: -22.5vh;
+}
+
+.app-icon-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.app-tag {
+    color: white;
+    font-size: 0.88vh;
+    margin-top: 0.35vh;
+}
+
+.app {
+    padding: 0.8vh;
+    border-radius: 1vh;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    font-size: 3.4vh;
+    text-align: center;
+    opacity: 0.85;
+    z-index: 999;
+    width: 3.4vh;
+    height: 3.4vh;
+}
+
+.app:hover {
+    opacity: 1.0;
+}
+
+.messages-icon {
+    background-image: linear-gradient(#57f272, #18c330);
+}
+
+.phone-icon {
+    background-image: linear-gradient(#57f272, #18c330);
+}
+
+.camera-icon {
+    color: #29292b;
+    background-image: linear-gradient(#d7d6db, #949399);
+}
+
+.twitter-icon{
+    background-image: linear-gradient(#03a9f4, #03a9f4);
+    font-size: 3.4vh;
+}
+
+.contacts-icon{
+    background-image: linear-gradient(#858585, #636363);
+}
+
+.yp-icon {
+    background-image: linear-gradient(#f1dd21, #ddcb29);   
+}
+
+.garage-icon {
+    background-image: linear-gradient(#f39a25, #ec8525);   
+}
+
+.settings-icon {
+    background-image: linear-gradient(#636363, #858585);
+}
+
+.banking-icon {
+    background-image: linear-gradient(#002e82, #0097d7);
+}
+
+.settings-container {
+    width: 92%;
+    height: 87%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5vh;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    z-index: 2;
+    margin-top: 1.7vh;
+}
+
+.setting-background {
+    background-color: black;
+    border-top: 6vh solid #111114;
+    width: 95%;
+    height: 87%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    border-radius: 5vh;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    bottom: 1vh;
+    right: 1vh;
+}
+
+.settings-title{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2.55vh;
+    color: white;
+    font-size: 1.6vh;
+    font-weight: bold;
+}
+
+.appearance-title {
+    color: #979797;
+    margin-left: 1vh;
+    margin-top: 1vh;
+    font-size: 1.25vh;
+}
+
+.appearance-container {
+    background-color: #211e22;
+    margin: auto;
+    margin-top: 0.5vh;
+    height: 28.5vh;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.appearance-preview {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5vh;
+    width: 25.5vh;
+}
+
+.appearance-toggle-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.dark-title {
+    color: white;
+    margin: auto;
+}
+
+.light-title {
+    color: white;
+    margin: auto;
+}
+
+.appearance-button-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: .5vh;
+    margin-bottom: 0vh;
+}
+
+.appearance-radio {
+  margin: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.dark-radio {
+    margin-top: .5vh;
+}
+
+.light-radio {
+    margin-top: .5vh;
+}
+
+.appearance-radio input {
+  display: none;
+}
+
+.appearance-radio input + span {
+  line-height: 1vh;
+  height: 1vh;
+  padding-left: 2.25vh;
+  display: block;
+  position: relative;
+}
+
+.appearance-radio input + span:not(:empty) {
+  padding-left: 1.25vh;
+}
+
+.appearance-radio input + span:before, .appearance-radio input + span:after {
+  content: "";
+  width: 2.5vh;
+  height: 2.5vh;
+  display: block;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.appearance-radio input + span:before {
+  background: #d1d7e3;
+  transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+
+.appearance-radio input + span:after {
+  background: #fff;
+  transform: scale(0.78);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+}
+
+.appearance-radio input:checked + span:before {
+  transform: scale(1.04);
+  background: #0075ff;
+}
+
+.appearance-radio input:checked + span:after {
+  transform: scale(0.4);
+  transition: transform 0.3s ease;
+}
+
+.appearance-radio:hover input + span:before {
+  transform: scale(0.92);
+}
+
+.appearance-radio:hover input + span:after {
+  transform: scale(0.74);
+}
+
+.appearance-radio:hover input:checked + span:after {
+  transform: scale(0.4);
+}
+
+.appearance-brightness-title {
+    margin: auto;
+    color: #979797;
+    margin-left: 1vh;
+    margin-top: -1vh;
+    font-size: 1.25vh;
+}
+
+.appearance-brightness {
+    background-color: #211e22;
+    margin: auto;
+    margin-top: -1vh;
+    margin-bottom: 0vh;
+    height: 3.5vh;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+}
+
+.brightness-sun-small {
+    margin: auto;
+    font-size: 1.25vh;
+}
+
+.brightness-sun-large {
+    margin: auto;
+    font-size: 1.6vh;
+}
+
+#brightness-range {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
+}
+
+.appearance-notifications-title {
+    margin: auto;
+    color: #979797;
+    margin-left: 1vh;
+    margin-top: .5vh;
+    font-size: 1.25vh;
+}
+
+.appearance-notifications {
+    background-color: #211e22;
+    margin: auto;
+    margin-top: -1vh;
+    height: 3.5vh;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+}
+
+.notifications-inner-title {
+    margin-top: -0.25vh;
+    margin-left: 1vh;
+}
+
+.notifications-checkbox {
+	width: 4vh;
+	height: 2vh;
+	overflow: hidden;
+	border-radius: 5vh;
+    margin: auto;
+    margin-right: 1vh;
+}
+
+.notifications-checkbox-label {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	background-color: #DDDDDD;
+	transition: background-color .3s;
+	-o-transition: background-color .3s;
+	-moz-transition: background-color .3s;
+	-webkit-transition: background-color .3s;
+}
+
+.notifications-checkbox-label-aux {
+	top: 0vh;
+	left: -0.15vh;
+	width: 2vh;
+	height: 2vh;
+	display: block;
+	position: absolute;
+	border-radius: 100%;
+	transition: left .3s;
+	-o-transition: left .3s;
+	background-color: white;
+	-moz-transition: left .3s;
+	-webkit-transition: left .3s;
+	box-shadow: 0vh 0.25vh 1vh 0vh rgba(56,55,56,0.61);
+	-moz-box-shadow: 0vh 0.25vh 1vh 0vh rgba(56,55,56,0.61);
+	-webkit-box-shadow: 0vh 0.25vh 1vh 0vh rgba(56,55,56,0.61);
+}
+
+.notifications-checkbox-input:checked + .notifications-checkbox-label {
+	background-color: #6EDC5F;
+}
+
+.notifications-checkbox-input:checked + .notifications-checkbox-label .notifications-checkbox-label-aux {
+	left: 2.15vh;
+}
+
+.notifications-checkbox-input {
+	display: none;
+}
+
+.garage-background {
+    background-color: black;
+    border-top: 6vh solid #111114;
+    width: 95%;
+    height: 87%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    border-radius: 5vh;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    bottom: 1vh;
+    right: 1vh;
+}
+
+.garage-container {
+    width: 92%;
+    height: 87%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5vh;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    z-index: 2;
+    margin-top: 1.7vh;
+}
+
+.garage-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2vh;
+    color: white;
+    font-size: 1.6vh;
+    font-weight: bold;
+}
+
+.vehicles-holder-container {
+    width: 100%;
+    height: 45vh;
+    margin: auto;
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.vehicles-holder {
+    overflow-y: scroll;
+}
+
+.vehicle-item {
+    width: 90%;
+    height: 5vh;
+    background-color: #111114;
+    margin: auto;
+    margin: auto;
+    margin-top: .8vh;
+    margin-bottom: 0vh;
+    border-radius: .5vh;
+    display: flex;
+    color: white;
+    font-weight: bold;
+}
+
+.garage-car-icon {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1vh;
+    font-size: 2.5vh;
+}
+
+.garage-vehicle-name {
+    font-size: 1.25vh;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1vh;
+}
+
+.garage-vehicle-plate {
+    color: darkgray;
+    font-size: 1.15vh;
+}
+
+.garage-vehicle-state {
+    font-size: 1.25vh;
+    margin: auto;
+    margin-right: 1vh;
+    color: white;
+}

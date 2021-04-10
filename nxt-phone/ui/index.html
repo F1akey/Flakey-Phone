@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Flakey_Phone</title>
+</head>
+<body>
+    <div class="shell">
+        <img src="img/shell.png" class="shell-img">
+        <div class="shell-background">
+            <div class="phone-header">
+                <div class="phone-time">1:20</div>
+                <div class="phone-wifi fas fa-wifi"></div>
+                <div class="phone-battery fas fa-battery-three-quarters"></div>
+            </div>
+            <div class="app-container">
+                <div class="app-icon-container">
+                    <div class="app fas fa-comment messages-icon"></div>
+                    <span class="app-tag">Messages</span>
+                </div>
+                <div class="app-icon-container">
+                    <div class="app fas fa-phone phone-icon"></div>
+                    <span class="app-tag">Phone</span>
+                </div>
+                <div class="app-icon-container">
+                    <div class="app fas fa-address-book contacts-icon"></div>
+                    <span class="app-tag">Contacts</span>
+                </div>
+                <div class="app-icon-container">
+                    <div class="app fas fa-camera camera-icon"></div>
+                    <span class="app-tag">Camera</span>
+                </div>
+                <div class="app-icon-container">
+                    <div class="app fab fa-twitter twitter-icon"></div>
+                    <span class="app-tag">Twitter</span>
+                </div>
+                <div class="app-icon-container">
+                    <div class="app fas fa-car garage-icon"></div>
+                    <span class="app-tag">Garage</span>
+                </div>
+                <div class="app-icon-container">
+                    <div class="app fas fa-file-alt yp-icon"></div>
+                    <span class="app-tag">Yellow Pages</span>
+                </div>
+                <div class="app-icon-container">
+                    <div class="app fas fa-cog settings-icon"></div>
+                    <span class="app-tag">Settings</span>
+                </div>
+                <div class="app-icon-container">
+                    <div class="app fab fa-paypal banking-icon"></div>
+                    <span class="app-tag">PayPal</span>
+                </div>
+            </div>
+            <div class="setting-background" style="display: none;"></div>
+            <div class="settings-container" style="display: none;">
+                <div class="settings-title">Settings</div>
+                <div class="appearance-title">APPEARANCE</div>
+                <div class="appearance-container">
+                    <img src="img/appearance-preview.png" class="appearance-preview">
+                    <div class="appearance-toggle-container">
+                        <div class="dark-title">Dark</div>
+                        <div class="light-title">Light</div>
+                    </div>
+                    <div class="appearance-button-container">
+                        <label class="appearance-radio dark-radio">
+                            <input type="radio" name="r" value="1" id="dark-radio" checked>
+                            <span></span>
+                        </label>
+                        <label class="appearance-radio light-radio">
+                            <input type="radio" name="r" value="2" id="light-radio">
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="appearance-brightness-title">BRIGHTNESS</div>
+                <div class="appearance-brightness">
+                    <span class="fas fa-sun brightness-sun-small"></span><input type="range" min="30" max="100" value="100" id="brightness-range"><span class="fas fa-sun brightness-sun-large"></span>
+                </div>
+                <div class="appearance-notifications-title">NOTIFICATIONS</div>
+                <div class="appearance-notifications">
+                    <span class="notifications-inner-title">Notifications</span>
+                    <div class="notifications-checkbox">
+                        <input class="notifications-checkbox-input" type="checkbox" id="notifications-checkbox-discovery"/>
+                        <label class="notifications-checkbox-label" for="notifications-checkbox-discovery">
+                          <label class="notifications-checkbox-label-aux" for="notifications-checkbox-discovery">
+                        </label>
+                      </div>
+                </div>
+            </div>
+            <div class="garage-background" style="display: none;"></div>
+            <div class="garage-container" style="display: none;">
+                <div class="garage-title">My Vehicles</div>
+                <div class="vehicles-holder-container">
+                    <div class="vehicles-holder">
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-container">
+                <div class="home-btn">
+                    <div class="bottom-home-btn"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
