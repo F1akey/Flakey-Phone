@@ -27,7 +27,9 @@
 
 ## Meta
 
-Distributed under the MIT license. ``MIT License
+Distributed under the MIT license. 
+
+`MIT License
 
 Copyright (c) 2018 GEOLYTIX
 
@@ -47,11 +49,11 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.``
+SOFTWARE.`
 
 [https://github.com/F1akey/github-link](https://github.com/F1akey/)
 
 ## Contributing
 
 1. Fork it (<https://github.com/F1akey/Flakey-Phone/fork>)
-2. Contibute your changes direct (`Contact Me Via Email: dev.flakey.business@gmail.com / Discord: Flakey#1111`)
+2. Contibute your changes direct (Contact Me Via Email: dev.flakey.business@gmail.com / Discord: Flakey#1111)
