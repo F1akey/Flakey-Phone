@@ -11,3 +11,4 @@ flakey.RegisterServerCallback('nxt-phone:getGarageVehicle', function(source, cb)
         cb(vehicles)
     end)
 end)
+

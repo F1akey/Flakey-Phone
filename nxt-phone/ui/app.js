@@ -70,7 +70,16 @@ $(document).ready(() => {
             setNotifications(2);
         };
     });
-    
+    $(".garage-search-bar").keyup(function() {
+        var txt = $('.garage-search-bar').val();
+        $('.vehicle-item').each(function(){
+            if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
     window.addEventListener('message', function (event) {
         let data = event.data;
         if (data.open === true) {
@@ -204,6 +213,8 @@ function garageAppTheme(mode) {
         $(".garage-vehicle-plate").css("color", "darkgray");
         $(".garage-vehicle-state").css("color", "white");
         $(".red-vehicle-item").css("background-color", "rgb(220, 45, 45)");
+        $(".garage-search-holder").css("color", "white");
+        $(".garage-search-bar").css("color", "white");
     } else if (mode == 2) {
         $(".garage-background").css("background-color", "#f1f0f9");
         $(".garage-background").css("border-color", "#fffeff");
@@ -213,6 +224,8 @@ function garageAppTheme(mode) {
         $(".garage-vehicle-plate").css("color", "rgb(60, 60, 60)");
         $(".garage-vehicle-state").css("color", "black");
         $(".red-vehicle-item").css("background-color", "rgb(235, 70, 70)");
+        $(".garage-search-holder").css("color", "black");
+        $(".garage-search-bar").css("color", "black");
     };
 };
 
@@ -224,6 +237,9 @@ function populateGarageApp(table) {
         if (name == "CARNOTFOUND") {
             name = "IMPORT";
         }
+        if (state == "In") {
+            state = "Stored";
+        }
         if (state == "Standard Impound" || state == "Police Impound") {
             $('.vehicles-holder').prepend(`
             <div class="vehicle-item red-vehicle-item">
@@ -232,7 +248,7 @@ function populateGarageApp(table) {
                     <br>
                     <span class="garage-vehicle-plate">${value.plate}</span>
                 </div>
-                <div class="garage-vehicle-state">${value.state}</div>
+                <div class="garage-vehicle-state">${state}</div>
             </div>
             `);
         } else {
@@ -243,7 +259,7 @@ function populateGarageApp(table) {
                     <br>
                     <span class="garage-vehicle-plate">${value.plate}</span>
                 </div>
-                <div class="garage-vehicle-state">(${value.state}) Garage ${value.garage}</div>
+                <div class="garage-vehicle-state">(${state}) Garage ${value.garage}</div>
             </div>
             `);
         }
