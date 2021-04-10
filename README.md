@@ -14,6 +14,8 @@
 
 ## Release History
 
+* 0.3.0
+    * ADD: Added `Searching Vehicles`
 * 0.2.1
     * ADD: Added `Vehicles Page`
 * 0.2.0
